@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "package-lock.json": true,
+    "node_modules": true,
+    ".output": true,
+    ".svelte-kit": true,
+    ".vercel": true,
+    "build": true,
+    "vite.config.js.timestamp-*": true
+  },
+  "files.trimFinalNewlines": true
+}

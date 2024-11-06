@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-text: var(--color-neutral-950);
+  --color-background: var(--color-neutral-50);
+}
+
+@layer base {
+  html {
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1;
+    text-underline-offset: 2px;
+    & * {
+      text-decoration-thickness: 1px;
+    }
+  }
+}
