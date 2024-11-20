@@ -1,6 +1,6 @@
 <script>
-const size = 20
-const weight = 1.5
+const size = 20;
+const weight = 1.5;
 </script>
 
 <svg

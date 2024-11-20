@@ -1,12 +1,12 @@
 <script>
 // Global Stylesheet
-import './styles.css'
+import './styles.css';
 
 // Local Dependencies
-import Field from './Field.svelte'
+import Field from './Field.svelte';
 
 // Icons
-import ChevronSortIcon from 'carbon-icons-svelte/lib/ChevronSort.svelte'
+import ChevronSortIcon from 'carbon-icons-svelte/lib/ChevronSort.svelte';
 
 //
 
@@ -20,7 +20,7 @@ let {
   error,
   children,
   ...props
-} = $props()
+} = $props();
 </script>
 
 {#snippet control({ id })}

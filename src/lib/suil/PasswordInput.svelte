@@ -1,19 +1,19 @@
 <script>
 // Global Stylesheet
-import './styles.css'
+import './styles.css';
 
 // Local Dependencies
-import Button from './Button.svelte'
-import TextInput from './TextInput.svelte'
+import Button from './Button.svelte';
+import TextInput from './TextInput.svelte';
 
 // Icons
-import ViewIcon from 'carbon-icons-svelte/lib/View.svelte'
-import ViewOffIcon from 'carbon-icons-svelte/lib/ViewOff.svelte'
+import ViewIcon from 'carbon-icons-svelte/lib/View.svelte';
+import ViewOffIcon from 'carbon-icons-svelte/lib/ViewOff.svelte';
 
 //
 
-let { value = $bindable(), visible = $bindable(false), header, footer, ...props } = $props()
-let Icon = $derived(visible ? ViewIcon : ViewOffIcon)
+let { value = $bindable(), visible = $bindable(false), header, footer, ...props } = $props();
+let Icon = $derived(visible ? ViewIcon : ViewOffIcon);
 </script>
 
 {#snippet fieldFooter()}{@render footer?.({ value, visible })}{/snippet}
@@ -31,7 +31,7 @@ let Icon = $derived(visible ? ViewIcon : ViewOffIcon)
         class="suil-button-inset"
         kind="ghost"
         onclick={() => {
-          visible = !visible
+          visible = !visible;
         }}><Icon class="suil-icon" /></Button
       >
     </div>

@@ -1,12 +1,12 @@
 <script>
 // Global Stylesheet
-import './styles.css'
+import './styles.css';
 
 // Local Dependencies
-import Field from './Field.svelte'
+import Field from './Field.svelte';
 
 // Icons
-import EditOffIcon from 'carbon-icons-svelte/lib/EditOff.svelte'
+import EditOffIcon from 'carbon-icons-svelte/lib/EditOff.svelte';
 
 //
 
@@ -24,7 +24,7 @@ let {
   header,
   footer,
   ...props
-} = $props()
+} = $props();
 </script>
 
 {#snippet labelBlock()}

@@ -1,13 +1,13 @@
 <script>
 // Global Stylesheet
-import './styles.css'
+import './styles.css';
 
 // Local Dependencies
-import Loader from './Loader.svelte'
+import Loader from './Loader.svelte';
 
 //
 
-let { href, class: classname, kind, disabled, loading = false, children, ...props } = $props()
+let { href, class: classname, kind, disabled, loading = false, children, ...props } = $props();
 </script>
 
 {#if !href || disabled || loading}

@@ -1,8 +1,8 @@
 {
   "editor.formatOnSave": true,
   "files.exclude": {
-    "package-lock.json": true,
     "node_modules": true,
+    "package-lock.json": true,
     ".output": true,
     ".svelte-kit": true,
     ".vercel": true,

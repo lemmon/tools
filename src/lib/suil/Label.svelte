@@ -1,10 +1,10 @@
 <script>
 // Global Stylesheet
-import './styles.css'
+import './styles.css';
 
 //
 
-let { class: classname, children, ...props } = $props()
+let { class: classname, children, ...props } = $props();
 </script>
 
 <label class="suil-component suil-label {classname || ''}" {...props}>{@render children()}</label>

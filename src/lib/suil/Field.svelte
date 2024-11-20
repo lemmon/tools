@@ -1,9 +1,9 @@
 <script>
 // Global Stylesheet
-import './styles.css'
+import './styles.css';
 
 // Local Dependencies
-import Label from './Label.svelte'
+import Label from './Label.svelte';
 
 //
 
@@ -20,7 +20,7 @@ let {
   header,
   footer,
   ...props
-} = $props()
+} = $props();
 </script>
 
 <div
