@@ -6,7 +6,7 @@ import Code from '$lib/suil/Code.svelte';
 let value = $state('');
 </script>
 
-<div class="space-y-3 p-3">
+<div class="space-y-4 p-4">
   <div><TextArea placeholder="Enter text to encode" bind:value /></div>
   <Code placeholder="Base64 encoded string" code={Base64.encode(value)} />
 </div>
