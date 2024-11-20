@@ -4,12 +4,15 @@ import { page } from '$app/stores';
 
 let { children } = $props();
 
-const nav = [{ href: '/uuid', label: 'UUID' }];
+const nav = [
+  { href: '/base64', label: 'Base64' },
+  { href: '/uuid', label: 'UUID' },
+];
 </script>
 
 <div class="max-w-container mx-auto flex min-h-screen flex-row">
   <nav class="my-3 flex w-72 flex-col border-r border-neutral-200">
-    <ul class="flex-1 rounded-lg px-3">
+    <ul class="flex-1 space-y-px px-3">
       {#each nav as { href, label } (href)}
         <li>
           <a
