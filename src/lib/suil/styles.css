@@ -1,0 +1,116 @@
+@layer base {
+  :root {
+    --suil-font: 16px / 20px system-ui;
+    --suil-code-font: 14px / 20px var(--font-family-mono);
+    --suil-size: 1rem;
+    --suil-border-width: 1px;
+    --suil-focus-width: 2px;
+    --suil-icon-gutter: 2px;
+
+    --suil-field-gap: 2px;
+    --suil-button-gap: 4px;
+    --suil-inset: 0.25rem;
+    --suil-textarea-min-lines: 2;
+
+    --suil-loader-size: 20px;
+    --suil-loader-width: 1.5px;
+    --suil-loader-speed: 0.5s;
+  }
+
+  .suil-component {
+    box-sizing: border-box;
+    &:before,
+    &:after,
+    & *,
+    & *:before,
+    & *:after {
+      box-sizing: inherit;
+    }
+  }
+
+  :root,
+  .suil-theme-white {
+    --suil-background: #fff;
+    --suil-color: var(--color-slate-900);
+    --suil-focus: var(--color-blue-600);
+    --suil-danger: var(--color-red-600);
+    --suil-label: #fff;
+    --suil-emphasis: #fff;
+    --suil-shade-100: var(--color-neutral-100);
+    --suil-shade-200: var(--color-neutral-200);
+    --suil-shade-300: var(--color-neutral-300);
+    --suil-shade-400: var(--color-neutral-400);
+  }
+
+  .suil-theme-gray-100 {
+    --suil-shade-100: var(--color-white);
+    --suil-shade-200: var(--color-neutral-200);
+    --suil-shade-300: var(--color-neutral-300);
+    --suil-shade-400: var(--color-neutral-400);
+  }
+}
+
+@layer utilities {
+  .suil-button-inset {
+    padding: calc(var(--suil-size) - var(--suil-inset));
+    margin: var(--suil-inset);
+  }
+
+  .suil-inset-sm {
+    --suil-inset: 0.125rem;
+  }
+
+  .suil-icon {
+    margin: var(--suil-icon-gutter);
+  }
+}
+
+/* CUSTOM */
+
+@layer base {
+  :root {
+    --suil-border-radius: 0.375rem;
+    --suil-textarea-min-lines: 3;
+    --suil-icon-gutter: -2px;
+  }
+}
+
+@layer utilities {
+  .suil-size-md {
+    --suil-size: 0.875rem;
+  }
+
+  .suil-size-sm {
+    --suil-size: 0.625rem;
+  }
+
+  .suil-size-xs {
+    --suil-size: 0.375rem;
+  }
+
+  .suil-size-xxs {
+    --suil-size: 0.125rem;
+  }
+
+  .suil-secondary {
+    --suil-color: var(--color-slate-200);
+    --suil-label: var(--color-slate-900);
+    --suil-emphasis: #000;
+  }
+
+  .suil-danger {
+    --suil-color: var(--suil-danger);
+  }
+
+  .suil-button-circle {
+    --suil-border-radius: 100%;
+  }
+
+  .suil-pill {
+    --suil-border-radius: 1.625rem;
+  }
+
+  .suil-gutter {
+    --suil-gutter: 0.25rem;
+  }
+}
