@@ -7,11 +7,15 @@ import CopyButton from './CopyButton.svelte';
 
 //
 
-let { class: classname, code, copy = true } = $props();
+let { class: classname, code, placeholder, copy = true } = $props();
 </script>
 
 <div class="suil-component suil-code {classname}">
-  <pre><code>{code || ' '}</code></pre>
+  {#if code}
+    <pre class="suil-code__code"><code>{code}</code></pre>
+  {:else}
+    <div class="suil-code__placeholder">{placeholder || ' '}</div>
+  {/if}
   {#if copy}
     <div><CopyButton class="suil-button-inset" kind="ghost" text={code} /></div>
   {/if}
@@ -31,15 +35,23 @@ let { class: classname, code, copy = true } = $props();
     background-color: var(--suil-shade-100);
   }
 
-  .suil-code pre {
+  .suil-code__code,
+  .suil-code__placeholder {
     flex: 1;
     padding: var(--suil-size);
     padding-right: 0;
+  }
+
+  .suil-code__code {
     white-space: pre-wrap;
     word-break: normal;
     word-break: break-word; /* Safari */
     overflow-wrap: anywhere;
     font: var(--suil-code-font, inherit);
+  }
+
+  .suil-code__placeholder {
+    color: color-mix(in oklch, currentColor 50%, transparent);
   }
 }
 </style>

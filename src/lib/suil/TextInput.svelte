@@ -79,6 +79,11 @@ let {
     outline: 0;
   }
 
+  .suil-control::placeholder {
+    color: color-mix(in oklch, currentColor 50%, transparent);
+    opacity: 1;
+  }
+
   .suil-control::-webkit-inner-spin-button,
   .suil-control::-webkit-outer-spin-button {
     appearance: none;

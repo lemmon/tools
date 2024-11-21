@@ -83,6 +83,11 @@ let {
     resize: none;
   }
 
+  .suil-control__textarea::placeholder {
+    color: color-mix(in oklch, currentColor 50%, transparent);
+    opacity: 1;
+  }
+
   .suil-control__preview {
     white-space: pre-wrap;
     overflow-wrap: break-word;
