@@ -71,7 +71,7 @@
   :root {
     --suil-border-radius: 0.375rem;
     --suil-textarea-min-lines: 3;
-    --suil-icon-gutter: -2px;
+    --suil-icon-gutter: 2px;
   }
 }
 
