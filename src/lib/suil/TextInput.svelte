@@ -34,6 +34,12 @@ let {
   {/if}
 {/snippet}
 
+{#snippet readonlyBlock()}
+  <div class="suil-field__icon">
+    <EditOffIcon class="suil-icon" />
+  </div>
+{/snippet}
+
 <Field
   {id}
   class={classname}
@@ -43,7 +49,7 @@ let {
   {info}
   {error}
   {before}
-  {after}
+  after={after || readonlyBlock}
   {header}
   {footer}
 >
@@ -56,11 +62,6 @@ let {
       {...props}
       bind:value
     />
-    {#if props.readonly}
-      <div class="suil-field__icon">
-        <EditOffIcon class="suil-icon" />
-      </div>
-    {/if}
   {/snippet}
 </Field>
 

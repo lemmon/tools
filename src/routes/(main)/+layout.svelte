@@ -6,6 +6,7 @@ let { children } = $props();
 const nav = [
   { href: '/base64', label: 'Base64' },
   { href: '/hash', label: 'Hash' },
+  { href: '/password', label: 'Password' },
   { href: '/uuid', label: 'UUID' },
 ];
 </script>
