@@ -17,8 +17,8 @@ const nav = [
       <li>
         <a
           class="block rounded-md p-3 {href === $page.url.pathname
-            ? 'bg-neutral-300/30'
-            : 'hover:bg-neutral-300/30'}"
+            ? 'bg-neutral-100'
+            : 'hover:bg-neutral-100'}"
           {href}>{label}</a
         >
       </li>

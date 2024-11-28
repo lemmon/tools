@@ -2,7 +2,7 @@
 
 @theme {
   --color-text: var(--color-neutral-950);
-  --color-background: var(--color-neutral-50);
+  --color-background: var(--color-white);
 }
 
 @layer base {
