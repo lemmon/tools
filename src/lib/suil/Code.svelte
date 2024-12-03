@@ -50,6 +50,10 @@ let { class: classname, code, placeholder, copy = true } = $props();
     font: var(--suil-code-font, inherit);
   }
 
+  .suil-code__code code {
+    display: block;
+  }
+
   .suil-code__placeholder {
     color: color-mix(in oklch, currentColor 50%, transparent);
   }
