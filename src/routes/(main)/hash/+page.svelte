@@ -3,8 +3,9 @@ import md5 from 'crypto-js/md5';
 import sha1 from 'crypto-js/sha1';
 import sha256 from 'crypto-js/sha256';
 import sha512 from 'crypto-js/sha512';
-import Button from '$lib/suil/Button.svelte';
 import TextArea from '$lib/suil/TextArea.svelte';
+import Tabs from '$lib/suil/Tabs.svelte';
+import TabsButton from '$lib/suil/TabsButton.svelte';
 import Code from '$lib/suil/Code.svelte';
 
 const TYPES = [
@@ -15,23 +16,19 @@ const TYPES = [
 ];
 
 let value = $state('');
-let hashType = $state(TYPES[0]);
+let hashName = $state(TYPES[1].name);
+let hashType = $derived(TYPES.find((x) => x.name === hashName));
 </script>
 
 <div class="space-y-4 p-4">
   <div><TextArea placeholder="Enter text to hash" bind:value /></div>
 
   <div class="flex flex-row justify-start">
-    <div class="flex flex-row gap-px rounded-md bg-neutral-100 p-0.5">
+    <Tabs bind:value={hashName}>
       {#each TYPES as item (item.name)}
-        <Button
-          class="suil-size-xs suil-gutter rounded-sm"
-          type="button"
-          kind={item.name !== hashType.name && 'ghost'}
-          onclick={() => (hashType = item)}>{item.name}</Button
-        >
+        <TabsButton name={item.name}>{item.name}</TabsButton>
       {/each}
-    </div>
+    </Tabs>
   </div>
 
   <Code placeholder="Hashed string" code={hashType.func(value).toString()} />

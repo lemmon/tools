@@ -1,7 +1,8 @@
 <script>
 import { Base64 } from 'js-base64';
 import TextArea from '$lib/suil/TextArea.svelte';
-import Button from '$lib/suil/Button.svelte';
+import Tabs from '$lib/suil/Tabs.svelte';
+import TabsButton from '$lib/suil/TabsButton.svelte';
 import Code from '$lib/suil/Code.svelte';
 
 import WarningFilledIcon from 'carbon-icons-svelte/lib/WarningFilled.svelte';
@@ -24,16 +25,11 @@ let result = $derived.by(() => {
   <div><TextArea placeholder="Enter text to {action}" bind:value /></div>
 
   <div class="flex flex-row justify-start">
-    <div class="flex flex-row gap-px rounded-md bg-neutral-100 p-0.5">
+    <Tabs bind:value={action}>
       {#each ACTIONS as item (item)}
-        <Button
-          class="suil-size-xs suil-gutter rounded-sm"
-          type="button"
-          kind={item !== action && 'ghost'}
-          onclick={() => (action = item)}>{item}</Button
-        >
+        <TabsButton name={item}>{item}</TabsButton>
       {/each}
-    </div>
+    </Tabs>
   </div>
 
   {#if result !== -1}
